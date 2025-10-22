@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Duelo da Forca - JavaScript Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <div class="control-panel">
+
+            <header class="game-logo">
+                <h1>O DUELO DA FORCA</h1>
+                <p>JAVASCRIPT GAME</p>
+            </header>
+
+            <section class="input-area">
+                <label for="guess-input">SUA LETRA:</label>
+                <input type="text" id="guess-input" maxlength="1" placeholder="A">
+                <button id="submit-letter-btn" class="western-button">TENTAR</button>
+            </section>
+
+            <section class="action-buttons">
+                <button id="chutar-btn" class="western-button large">CHUTAR!</button>
+                <button id="limpar-btn" class="western-button large">LIMPAR JOGO</button>
+            </section>
+
+            <section class="status-board">
+                <h3>LETRAS UTILIZADAS:</h3>
+                <p id="used-letters">A, D, E, H, I, ...</p>
+                <h3>ERROS RESTANTES:</h3>
+                <p id="error-count">6 / 7</p>
+            </section>
+
+            <footer class="config-area">
+                <button id="settings-btn" class="settings-button">
+                    <span class="gear-icon">⚙️</span> Configurações
+                </button>
+            </footer>
+        </div>
+
+        <div class="game-area"> 
+
+            <div class="hint-banner">
+                <p>CATEGORIA:</p>
+                <h2>NOMES DE CIDADES DO OESTE</h2>
+            </div>
+
+            <div class="hangman-display">
+                <div id="gallows" class="gallows-base">
+                    <img src="imagens/forca.png" alt="A Forca" class="forca-img">
+                    <img src="imagens/forca0.png" alt="Caubói Enforcado" id="cowboy-figure" class="cowboy-error-0">
+                </div>
+            </div>
+
+            <div class="word-panel">
+                <p class="panel-title">PALAVRA SECRETA</p>
+                <div id="word-display" class="word-display-lines">
+                    <span class="letter-line">_</span>
+                    <span class="letter-line">_</span>
+                    <span class="letter-line">A</span>
+                    <span class="letter-line">_</span>
+                    <span class="letter-line">I</span>
+                    <span class="letter-line">A</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
