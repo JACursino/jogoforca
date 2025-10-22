@@ -39,24 +39,41 @@ body {
 
 /* Logo */
 .game-logo {
-    
+
     text-align: center;
     padding-bottom: 15px;
     border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
 
 }
 
-.game-logo h1 {
-    font-family: var(--font-title);
-    font-size: 2em;
-    color: var(--color-secondary-gold);
-    text-shadow: 2px 2px 0 #000;
-    margin: 0 0 5px 0;
+.game-logo {
+    /* 1. Definir as dimensões da imagem do logo */
+    width: 250px; /* Largura base do logo */
+    height: 250px; /* Altura base do logo (ajuste conforme a proporção) */
+    margin: 0 auto 15px auto; /* Centraliza o bloco na barra lateral e adiciona margem inferior */
+
+    /* 2. Referenciar a imagem do logo */
+    background-image: url('imagens/logoforca1.png');
+    background-size: contain; /* Garante que a imagem caiba inteira no contêiner */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 3. Remover a linha de baixo, pois o logo pode ser redondo e isso atrapalha */
+    /* Se quiser uma borda em volta do bloco do logo, use border: 5px solid gold; */
+    /* border-bottom: 2px dashed rgba(255, 255, 255, 0.3); <- Linha removida */
 }
 
-.game-logo p {
-    font-size: 0.8em;
-    margin: 0;
+/* Regra para esconder o texto, caso você mantenha ele no HTML */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* Inputs e Botões Gerais */
